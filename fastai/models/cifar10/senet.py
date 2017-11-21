@@ -1,6 +1,6 @@
 '''SENet in PyTorch.
 
-SENet is the winner of ImageNet-2017. The paper is not released yet.
+SENet is the winner of ImageNet-2017 (https://arxiv.org/abs/1709.01507).
 '''
 import torch
 import torch.nn as nn
@@ -112,4 +112,5 @@ class SENet(nn.Module):
 
 
 def SENet18(): return SENet(PreActBlock, [2,2,2,2])
+def SENet34(): return SENet(PreActBlock, [3,4,6,3])
 
